@@ -1,0 +1,10 @@
+name: TeamHealth
+main: com.leontg77.teamhealth.Main
+version: 1.0
+author: LeonTG77
+description: TeamHealth scenario plugin.
+
+commands:
+  teamhealth:
+    description: Enable or disable teamhealth.
+    aliases: [th]
