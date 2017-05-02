@@ -36,6 +36,7 @@ import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.event.HandlerList;
+import org.bukkit.scoreboard.DisplaySlot;
 import org.bukkit.scoreboard.Scoreboard;
 
 import com.leontg77.teamhealth.Main;
@@ -124,6 +125,9 @@ public class THCommand implements CommandExecutor, TabCompleter {
             }
 
             task = null;
+
+            board.clearSlot(DisplaySlot.PLAYER_LIST);
+            board.clearSlot(DisplaySlot.BELOW_NAME);
             return true;
         }
 
