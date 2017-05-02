@@ -1,0 +1,10 @@
+name: ${project.name}
+main: ${project.groupId}.${project.artifactId}.Main
+version: ${project.version}
+author: LeonTG
+description: Health on the Tab List and below the player name tag shows as combined health of all players on the team.
+
+commands:
+  teamhealth:
+    description: Get info, enable or disable the scenario.
+    aliases: [thp]
