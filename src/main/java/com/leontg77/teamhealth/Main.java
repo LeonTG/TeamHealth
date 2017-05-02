@@ -44,15 +44,17 @@ import org.bukkit.scoreboard.Team;
 public class Main extends JavaPlugin {
     public static final String PREFIX = "§cTeam Health §8» §7";
 
+    private Scoreboard board;
+
     @Override
     public void onEnable() {
+        this.board = Bukkit.getScoreboardManager().getMainScoreboard();
+
         DeathListener listener = new DeathListener(this);
         THCommand command = new THCommand(this, listener, board);
 
         getCommand("teamhealth").setExecutor(command);
     }
-
-    private final Scoreboard board = Bukkit.getScoreboardManager().getMainScoreboard();
 
     /**
      * Send the given message to all online players.

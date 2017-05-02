@@ -48,8 +48,8 @@ public class DeathListener implements Listener {
 
     @EventHandler
     public void on(PlayerDeathEvent event) {
-		Player player = event.getEntity();
-		Team team = plugin.getTeam(player);
+        Player player = event.getEntity();
+        Team team = plugin.getTeam(player);
 
         if (team == null) {
             return;
